@@ -4,7 +4,7 @@ if (isset($_GET['tickers'])) {
 
     $tickerarr = explode(
         "\n",
-        str_replace(["\r\n", "\n\r", "\r"], "\n", $tickers)
+        str_replace(["\r\n", "\n\r", "\r", " "], "\n", $tickers)
     );
 
     foreach ($tickers as $fields) {
