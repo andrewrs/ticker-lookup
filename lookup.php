@@ -19,6 +19,11 @@ if (isset($_GET['tickers'])) {
 .tickerlinks {margin-bottom: 2em;}
 .tickerlinks h2 {margin-bottom: 0;}
 </style>
+<script>
+function openElink(elink) {
+	window.open(elink, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=200,left=200,width=700,height=600");
+}
+</script>
 </head>
 <body>
 <?php foreach ($tickerarr as $value) {
