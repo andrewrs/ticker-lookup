@@ -10,8 +10,6 @@ if (isset($_GET['tickers'])) {
     foreach ($tickers as $fields) {
     }
 } ?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
