@@ -24,6 +24,8 @@ function openElink(elink) {
 	window.open(elink, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=200,left=200,width=700,height=600");
 }
 </script>
+<script src="https://d3js.org/d3.v6.js"></script>
+<script src="drawchart.js"></script>
 </head>
 <body>
 <?php 
