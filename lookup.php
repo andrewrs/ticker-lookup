@@ -41,7 +41,7 @@ foreach ($tickerarr as $value) {
 } 
 ?>
 <form action='' name='frm' method='get'>
-<textarea rows="30" name="tickers"><?php echo $tickers; ?></textarea>
+<textarea rows="10" name="tickers"><?php echo $tickers; ?></textarea>
 <br>
 <input type="submit" value="Get Links" >
 </form>
