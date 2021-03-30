@@ -1,4 +1,5 @@
 <?php
+$mskey = 'Your_Key';  // Get key at https://marketstack.com/signup
 if (isset($_GET['tickers'])) {
     $tickers = $_GET['tickers'];
 
@@ -33,10 +34,11 @@ foreach ($tickerarr as $value) {
 	$value=strtoupper(trim($value));
 	if ($value !='') {
 	echo "<div class='tickerlinks'><h2>$value</h2><a onclick=\"openElink('https://finance.yahoo.com/quote/$value'); return false;\" href='https://finance.yahoo.com/quote/$value'>yahoo- $value</a><br>\n";
-   echo "<a onclick=\"openElink('https://ycharts.com/companies/$value'); return false;\"  href='https://ycharts.com/companies/$value'>ycharts- $value</a><br>\n";
-   echo "<a onclick=\"openElink('https://my.kiplinger.com/tfn/ticker.html?ticker=$value'); return false;\" href='https://my.kiplinger.com/tfn/ticker.html?ticker=$value'>kiplinger- $value</a><br>\n";
-   echo "<a onclick=\"openElink('https://investorplace.com/stock-quotes/$value-stock-quote/'); return false;\" href='https://investorplace.com/stock-quotes/$value-stock-quote/'>Investorplace- $value</a><br>\n";
-   echo "<a onclick=\"openElink('https://www.tradingview.com/symbols/$value'); return false;\" href='https://www.tradingview.com/symbols/$value'>tradingview- $value</a></div>\n";
+        echo "<a onclick=\"openElink('https://ycharts.com/companies/$value'); return false;\"  href='https://ycharts.com/companies/$value'>ycharts- $value</a><br>\n";
+        echo "<a onclick=\"openElink('https://my.kiplinger.com/tfn/ticker.html?ticker=$value'); return false;\" href='https://my.kiplinger.com/tfn/ticker.html?ticker=$value'>kiplinger- $value</a><br>\n";
+        echo "<a onclick=\"openElink('https://investorplace.com/stock-quotes/$value-stock-quote/'); return false;\" href='https://investorplace.com/stock-quotes/$value-stock-quote/'>Investorplace- $value</a><br>\n";
+        echo "<a onclick=\"openElink('https://www.tradingview.com/symbols/$value'); return false;\" href='https://www.tradingview.com/symbols/$value'>tradingview- $value</a></div>\n";
+        $msurl = 'http://api.marketstack.com/v1/tickers/' . $value . '/eod?access_key=' . $mskey ;
    }
 } 
 ?>
